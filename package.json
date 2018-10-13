@@ -1,0 +1,27 @@
+{
+  "name": "ssb-integration-tests",
+  "version": "1.0.0",
+  "description": "Testing various methods of connection ssb-client to sbot",
+  "scripts": {
+    "test": "find test/**/test.sh -execdir bash test.sh \\;"
+  },
+  "keywords": [
+    "ssb",
+    "scuttlebutt"
+  ],
+  "author": "Jan Bölsche <jan@lagomorph.de> (https://regular.codes/)",
+  "license": "ISC",
+  "dependencies": {
+    "scuttlebot-release": "latest",
+    "ssb-client": "latest"
+  },
+  "devDependencies": {
+    "brfs": "^2.0.1",
+    "browser-run": "^5.0.0",
+    "browserify": "^16.2.3",
+    "budo": "^11.4.1",
+    "envify": "^4.1.0",
+    "rc": "^1.2.8",
+    "tape": "^4.9.1"
+  }
+}

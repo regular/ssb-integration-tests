@@ -1,0 +1,13 @@
+{
+  "caps": {
+    "shs": "/oY1xVxcDOY3/gYI1h1s/A1TsnnK68gtW0SnaAgGAQY="
+  },
+  "host": "localhost",
+  "port": 51958,
+  "ws": {
+    "port": 51959
+  },
+  "master": [
+    "@wG5OMERWGJ2DH/PXJoIIZtOBtZwSmLtpa+JB3kno3N8=.ed25519"
+  ]
+}
