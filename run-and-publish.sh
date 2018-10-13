@@ -1,3 +1,4 @@
+#!/bin/bash
 set -eu -o pipefail
 
 mv report.md old_report.md || true

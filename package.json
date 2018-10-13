@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Testing various methods of connection ssb-client to sbot",
   "scripts": {
-    "test-summary": "find test/**/test.sh -execdir bash test.sh \\; | tap-markdown --no-duration",
-    "test": "find test/**/test.sh -execdir bash -c 'bash test.sh && [[ -f sbot.log  ]] && echo -e \"\\n\\nSbot log: \\n\" && cat sbot.log' \\;"
+    "test-summary": "find test -name test.sh -execdir bash test.sh \\; | tap-markdown --no-duration",
+    "test": "find test -name test.sh -execdir bash -c 'bash test.sh && [[ -f sbot.log  ]] && echo -e \"\\n\\nSbot log: \\n\" && cat sbot.log' \\;"
   },
   "keywords": [
     "ssb",
