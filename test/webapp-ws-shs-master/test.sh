@@ -2,7 +2,7 @@ set -eu -o pipefail
 PATH=../../bin:../../node_modules/.bin:${PATH}
 
 function sbot_server () {
-  rm -rf .ssb || true
+  #rm -rf .ssb || true
   rm sbot.log || true
   local-sbot server >sbot.log 2>&1 &
   echo $!
