@@ -16,6 +16,7 @@ opts.remote = process.env.ws_address
 //console.log(opts)
 
 test('connect to sbot via ws and shs (master)', t => {
+  t.ok(opts.remote, 'ws.getAddress() retunred something')
   ssbClient(keys, opts, (err, ssb) => {
     t.error(err, 'ssb-client does not error')
     t.ok(ssb, 'ssb-client calls cb with API object')
