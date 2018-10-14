@@ -12,11 +12,11 @@ const keys = {
 const opts = JSON.parse(fs.readFileSync('./.ssbrc'))
 opts.manifest = JSON.parse(fs.readFileSync(__dirname + '/.ssb/manifest.json'))
 const pubkey = keys.id.slice(1).replace(`.${keys.curve}`, '')
-opts.remote = process.env.ws_address
+opts.remote = process.env.remote
 //console.log(opts)
 
 test('connect to sbot via ws and shs (master)', t => {
-  t.ok(opts.remote, 'ws.getAddress() retunred something')
+  t.ok(opts.remote, 'getAddress() retunred something')
   ssbClient(keys, opts, (err, ssb) => {
     t.error(err, 'ssb-client does not error')
     t.ok(ssb, 'ssb-client calls cb with API object')
@@ -25,6 +25,7 @@ test('connect to sbot via ws and shs (master)', t => {
       t.ok(feed.id)
       t.notEqual(feed.id, keys.id, 'ssb.whoami returns sbot public key')
       t.end()
+      window.close()
     }) 
   })
 })

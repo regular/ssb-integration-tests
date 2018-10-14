@@ -16,5 +16,8 @@ function cleanup () {
 
 trap cleanup EXIT
 sbot_pid=$(sbot_server)
-export ws_address="$(local-sbot ws.getAddress | tr -d '"')"
-browserify index.js -t brfs -t envify| timeout 3s browser-run
+export remote="$(local-sbot getAddress | tr -d '"')"
+echo "remote ${remote} $?"
+rm .err 2>/dev/null || true
+browserify index.js -t brfs -t envify| timeout 10s browser-run | tee >(grep Error | cat > .err)
+[[ -f .err ]] && echo "not ok 0 $(cat .err|head -n1)" && exit 1
