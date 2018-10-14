@@ -1,0 +1,8 @@
+details.txt
+node_modules/
+old_report.md
+package-lock.json
+report.md
+**/.err
+**/.ssb
+**/sbot.log
